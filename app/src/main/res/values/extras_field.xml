@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="funcType">funcType</string>
+    <string name="classNameByAndroid">classNameByAndroid</string>
+    <string name="classNameByIOS">classNameByIOS</string>
+    <string name="backButtonName">backButtonName</string>
+    <string name="titleNameColor">titleNameColor</string>
+    <string name="backButtonNameColor">backButtonNameColor</string>
+    <string name="startPage">startPage</string>
+    <string name="splitLineColor">splitLineColor</string>
+    <string name="tipsUrl">tipsUrl</string>
+    <string name="backType">backType</string>
+    <string name="tipsButtonName">tipsButtonName</string>
+    <string name="bottomTabFlag">bottomTabFlag</string>
+    <string name="pathFolder">pathFolder</string>
+    <string name="titleName">titleName</string>
+    <string name="tipsButtonNameColor">tipsButtonNameColor</string>
+    <string name="titlebarColor">titlebarColor</string>
+    <string name="thirdPartyUrl">thirdPartyUrl</string>
+    <string name="messageTitle">messageTitle</string>
+    <string name="messageDetail">messageDetail</string>
+
+
+</resources>

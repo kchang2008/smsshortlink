@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="bg_public">#f5f5f9</color>
+    <color name="text_a">#ff969ba0</color>
+    <color name="grey_999999">#ff999999</color>
+    <!-- 未选中是字体颜色 -->
+    <color name="text_b">#ff2b323a</color>
+    <color name="white">#ffffff</color>
+    <!-- A really bright Holo shade of blue -->
+    <color name="holo_blue_bright">#ff00ddff</color>
+</resources>

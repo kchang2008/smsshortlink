@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_public"
+    tools:context="sms.imobpay.com.testsmslinkcore.SmsLinkCoreActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id = "@+id/url_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/textview_style"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
+            android:text="">
+        </TextView>
+
+        <EditText
+            android:id = "@+id/url_host_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dimen_2"
+            style="@style/textview_style"
+            android:gravity="center"
+            android:textColor="@color/holo_blue_bright"
+            android:text="@string/rtb_http_url">
+        </EditText>
+
+        <!--手机号码输入-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.4"
+                style="@style/textview_style"
+                android:text="@string/pls_input_phone_number">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dimen_5"
+                style="@style/textview_style"
+                android:background="@color/bg_public"
+                android:text=":"/>
+
+            <EditText
+                android:id = "@+id/phone_num_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                style="@style/textview_style"
+                android:inputType="number"
+                android:maxLength="11"
+                android:text=""
+                android:layout_marginLeft="@dimen/dimen_5">
+            </EditText>
+        </LinearLayout>
+
+        <!--APP选择-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.4"
+                style="@style/textview_style"
+                android:text="@string/pls_select_app">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dimen_5"
+                style="@style/textview_style"
+                android:background="@color/bg_public"
+                android:text=" "/>
+
+            <Spinner
+                android:id = "@+id/app_selcet_sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:entries="@array/appList"
+                android:background="@color/text_a"
+                android:layout_marginLeft="@dimen/dimen_5">
+            </Spinner>
+        </LinearLayout>
+
+        <!--功能区：0:本地方法；1:本地h5页面；2.第三方页面；3:纯文本页面展示-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.4"
+                style="@style/textview_style"
+                android:text="@string/funcType">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dimen_5"
+                style="@style/textview_style"
+                android:background="@color/bg_public"
+                android:text=":"/>
+
+            <EditText
+                android:id = "@+id/func_type_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColorHint="@color/grey_999999"
+                android:hint="@string/only_input_0123"
+                style="@style/textview_style"
+                android:digits="0123"
+                android:inputType="number"
+                android:maxLength="1"
+                android:text=""
+                android:layout_marginLeft="@dimen/dimen_5">
+            </EditText>
+        </LinearLayout>
+
+        <!--本地方法跳转配置布局-->
+        <LinearLayout
+            android:id="@+id/local_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <!--安卓本地方法和句柄-->
+            <include layout="@layout/field_item" android:id="@+id/classNameByAndroid_layout"></include>
+            <include layout="@layout/field_item" android:id="@+id/classNameByIOS_layout"></include>
+
+        </LinearLayout>
+
+        <!--本地或者第三方页面跳转配置布局-->
+        <LinearLayout
+            android:id="@+id/h5_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <include layout="@layout/field_item" android:id="@+id/backButtonName_layout"></include>
+            <include layout="@layout/field_item" android:id="@+id/titleNameColor_layout"></include>
+            <include layout="@layout/field_item" android:id="@+id/backButtonNameColor_layout"></include>
+            <include layout="@layout/field_item" android:id="@+id/startPage_layout"></include>
+            <include layout="@layout/field_item" android:id="@+id/tipsUrl_layout"></include>
+
+            <include layout="@layout/field_item" android:id="@+id/backType_layout"></include>
+            <include layout="@layout/field_item" android:id="@+id/tipsButtonName_layout"></include>
+            <include layout="@layout/field_item" android:id="@+id/bottomTabFlag_layout"></include>
+            <include layout="@layout/field_item" android:id="@+id/pathFolder_layout"></include>
+            <include layout="@layout/field_item" android:id="@+id/titleName_layout"></include>
+
+            <include layout="@layout/field_item" android:id="@+id/tipsButtonNameColor_layout"></include>
+            <include layout="@layout/field_item" android:id="@+id/titlebarColor_layout"></include>
+            <include layout="@layout/field_item" android:id="@+id/splitLineColor_layout"></include>
+
+            <include layout="@layout/field_item" android:id="@+id/thirdPartyUrl_layout"></include>
+        </LinearLayout>
+
+        <!--本地或者第三方页面跳转配置布局-->
+        <LinearLayout
+            android:id="@+id/diasplay_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <include layout="@layout/field_item" android:id="@+id/messageTitle_layout"></include>
+            <include layout="@layout/field_item" android:id="@+id/messageDetail_layout"></include>
+        </LinearLayout>
+
+        !--功能布局-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/send_sms_bt"
+                style="@style/bt_next"
+                android:layout_width="fill_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="@dimen/dimen_25"
+                android:layout_marginRight="@dimen/dimen_25"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_bt_blue"
+                android:text="@string/send_sms"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/make_short_url_bt"
+                style="@style/bt_next"
+                android:layout_width="fill_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="@dimen/dimen_25"
+                android:layout_marginRight="@dimen/dimen_25"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_bt_blue"
+                android:text="@string/make_url"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

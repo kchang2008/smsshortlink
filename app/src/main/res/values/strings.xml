@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">短链测试</string>
+    <string name="send_sms">发送短信</string>
+    <string name="make_url">生成短链</string>
+    <string name="back">返回</string>
+    <string name="only_input_0123">只能输入0，1，2，3</string>
+    <string name="pls_input_phone_number">请输入手机号码</string>
+    <string name="pls_select_app">请选择APP</string>
+    <string name="title_color">#3d4245</string>
+    <string name="split_color">#b2b2b2</string>
+    <string name="title_bar_color">#f7f7f7</string>
+    <string name="back_bt_color">#3ca0ff</string>
+    <string name ="rqb_http_url">"test/v3_test/openapp"</string>
+    <string name ="rtb_http_url">"test/v3_test/openapp"</string>
+</resources>
